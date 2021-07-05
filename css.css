@@ -1,0 +1,125 @@
+@keyframes changebtn {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+        color: blue;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgb(0, 255, 255), rgb(145, 255, 0));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    text-transform: uppercase;
+    color: rgb(21, 39, 43);
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.questions_keeper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.questions_keeper .ul_questions_keeper {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(1, 70%);
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width:500px) {
+    .questions_keeper .ul_questions_keeper {
+        grid-template-columns: repeat(1, 90%);
+    }
+}
+
+.part_question_answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    /* height: auto; */
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.part_question_answer_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 70px; */
+    height: auto;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.questionsAndAnswer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+.open_close {
+    border: 1px so black;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    outline: none;
+}
+
+.open_close:hover {
+    animation: changebtn 1s ease-in-out;
+}
+
+.answer {
+    text-transform: capitalize;
+    padding: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 100%;
+    height: auto;
+}
